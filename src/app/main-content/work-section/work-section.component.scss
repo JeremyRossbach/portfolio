@@ -1,0 +1,53 @@
+@mixin df-c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin width-height-100 {
+    width: 100%;
+    height: 100vh;
+}
+
+#work-section {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    @include width-height-100;
+    z-index: 2;
+}
+
+h1 {
+    margin-left: 32px;
+}
+
+.app-projects {
+    height: -webkit-fill-available;
+    margin: 32px;
+    @include df-c;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+@media (max-width: 1600px) {
+    #work-section {
+        flex-direction: column;
+    }
+
+    .app-projects {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 650px) {
+    #work-section {
+        height: unset;
+        gap: 40px;
+    }
+
+    .app-projects {
+        flex-direction: column;
+        gap: 80px;
+    }
+}

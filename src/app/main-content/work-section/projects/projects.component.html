@@ -1,0 +1,15 @@
+<div #project class="projectsContainer" *ngFor="let project of projects" target="_blank">
+    <div class="title">
+        <div class="projectNumber">{{ project.nr }}</div>
+        <span class="projectTitle">{{ project.title }}</span>
+        <div class="spacer"></div>
+    </div>
+    <div class="description">
+        <span class="projectDescription">{{ project.description }}</span>
+        <span class="projectLanguages">{{ project.languages }}</span>
+    </div>
+    <div class="buttons">
+        <button><a href="{{ project.livetest }}">Live Test</a></button>
+        <button><a href="{{ project.github }}">GitHub</a></button>
+    </div>
+</div>

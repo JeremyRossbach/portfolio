@@ -1,0 +1,21 @@
+<div #content id="content">
+    <a routerLink="/" (click)="goToTop()" (mouseenter)="logoEnter()" (mouseleave)="logoLeave()" #logoContainer
+        id="logo">
+        <span #logo id="jeremy">Jeremy Sean </span><span #copyright id="copyright">©2024</span>
+    </a>
+    <div id="menuIconContainer">
+        <img (click)="menu()" #menuIcon id="menuIcon" src="./../../../assets/img/menu-black.svg">
+    </div>
+    <div #menuContainer id="menuContainer">
+        <div #menuPoints id="menuPoints">
+            <a #aboutMe class="link" href="#about-section">About me</a>
+            <a #skills class="link" href="#skills-section">Skills</a>
+            <img (click)="menu()" #closeIcon id="closeIcon" src="./../../../assets/img/close-black.svg">
+            <a #work class="link" href="#work-section">Work</a>
+            <a #contact class="link" href="#contact-section">Contact</a>
+        </div>
+    </div>
+    <div #modeIconContainer id="mode">
+        <img (click)="mode()" #modeIcon id="modeIcon" src="./../../../assets/img/darkmode-black.svg">
+    </div>
+</div>

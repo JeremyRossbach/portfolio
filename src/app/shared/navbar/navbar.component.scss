@@ -1,0 +1,108 @@
+@mixin df-c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin links {
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+    color: #211f2000;
+}
+
+#content {
+    width: 100vw;
+    height: 5em;
+    position: fixed;
+    top: 0;
+    @include df-c;
+    justify-content: space-between;
+    z-index: 999;
+}
+
+#logo {
+    width: 162px;
+    padding-left: 32px;
+    overflow: hidden;
+    @include links;
+}
+
+#jeremy {
+    @include links;
+    font-weight: 600;
+}
+
+#copyright {
+    font-weight: 300;
+}
+
+#menuContainer {
+    @include df-c;
+    gap: 40px;
+}
+
+
+#menuPoints {
+    @include df-c;
+    gap: 32px;
+}
+
+#mode {
+    width: 162px;
+    @include df-c;
+    justify-content: end;
+    margin-right: 32px;
+}
+
+#menuIcon,
+#menuIconContainer {
+    display: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+#modeIcon {
+    width: 32px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+#closeIcon {
+    width: 32px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 500px) {
+    #mode {
+        width: max-content;
+    }
+}
+
+@media (max-width: 799px) {
+    #menuContainer {
+        display: none;
+    }
+
+    #menuIcon,
+    #menuIconContainer {
+        display: flex;
+    }
+}
+
+@media (min-width: 800px) {
+    #menuContainer {
+        display: flex;
+    }
+
+    #closeIcon {
+        display: none;
+    }
+}

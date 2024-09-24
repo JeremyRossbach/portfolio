@@ -1,0 +1,68 @@
+@mixin df-c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin links {
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+    color: #211F20;
+}
+
+#content {
+    width: 100%;
+    height: 5em;
+    @include df-c;
+    justify-content: space-between;
+    z-index: 999;
+}
+
+#dev {
+    width: -webkit-fill-available;
+    margin-left: 32px;
+}
+
+#nav {
+    width: -webkit-fill-available;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* span {
+    margin-left: 32px;
+} */
+
+#links {
+    display: flex;
+    gap: 64px;
+}
+
+#arrowup {
+    margin-right: 32px;
+    cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+    #links {
+        gap: 32px;
+    }
+}
+
+@media (max-width: 900px) {
+    #content {
+        flex-direction: column-reverse;
+        margin-bottom: 32px;
+    }
+
+    #nav {
+        margin-left: 32px;
+    }
+}
+
+@media (max-width: 550px) {
+    #links {
+        gap: 16px;
+    }
+}
