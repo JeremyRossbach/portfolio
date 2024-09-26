@@ -1,0 +1,33 @@
+{
+    "aboutMe": "Über mich",
+    "work": "Werke",
+    "contact": "Kontakt",
+    "basedIn": "Sitz in",
+    "feelFree": "Fühl dich frei, mich zu kontaktieren.",
+    "contactMe": "kontaktiere mich",
+
+    "aboutMeH1": "ÜBER MICH",
+    "aboutMeText1": "Deutschsprachiger Front-End Developer mit Sitz in Hamburg, Deutschland. Angetrieben von meiner Affinität für innovative Lösungen und den unendlichen Möglichkeiten, die die IT bietet, gestalte ich immersive digitale Erlebnisse, die Kreativität mit Funktionalität verbinden.",
+    "aboutMeText2": "Ich bin flexibel in Bezug auf meine Arbeitsumgebung und passe meinen Arbeitsstil an, um Effizienz und Zusammenarbeit unabhängig vom Standort zu gewährleisten. Besonders gerne arbeite ich vor Ort, um noch enger mit meinen Kollegen zusammenzuarbeiten. Gleichzeitig habe ich Erfahrungen im Remote-Arbeiten gesammelt und moderne Tools wie Discord, Slack, Trello und Git genutzt, um die Kommunikation und Projektverfolgung zu unterstützen.",
+    "aboutMeText3": "Ich bin stets bereit, neue Technologien und Ansätze zu lernen und stelle mich jeder Herausforderung, um Ihre Ziele und Visionen zu realisieren. Ich freue mich darauf, an neuen Projekten mitzuwirken, bei denen ich meine Erfahrungen einbringen und zur Entwicklung innovativer Web-Lösungen beitragen kann.",
+
+    "javascript": "JavaScript ist eine essentielle Programmiersprache in der Front-End-Entwicklung, die interaktive und dynamische Benutzeroberflächen für Webanwendungen erstellt. Sie ermöglicht die Manipulation von HTML und CSS und bildet das Herzstück vieler populärer Frameworks und Bibliotheken wie React, Angular und Vue.js.",
+    "typescript": "TypeScript ist eine auf JavaScript basierende Programmiersprache, die statische Typisierung bietet, um die Codequalität und Wartbarkeit zu verbessern. Sie ermöglicht frühzeitige Fehlererkennung und wird häufig in modernen Frameworks wie Angular und React verwendet.",
+    "angular": "Angular ist ein weit verbreitetes Framework zur Entwicklung von Webanwendungen, das auf TypeScript basiert und Entwicklern hilft, leistungsstarke und dynamische Single-Page-Anwendungen (SPAs) zu erstellen. Es zeichnet sich durch eine modulare Architektur und umfassende Werkzeuge wie das Routing aus, die eine effiziente Entwicklung und Wartung von komplexen Anwendungen ermöglichen.",
+    "skillsText1": "Zudem besitze ich fundierte Kenntnisse in verschiedenen anderen Bereichen, darunter HTML, CSS (SCSS) und die Interaktion mit Datenbanken in Form von REST-APIs und Firebase-Datenbanken. Ich bin vertraut mit der Anwendung der SCRUM-Methodik für agiles Projektmanagement sowie der Arbeit mit Git. Auch mit Design-Frameworks wie Material Design und Bootstrap kann ich arbeiten.",
+    "skillsText2": "Sollten Sie nach weiteren Fähigkeiten suchen, zögern Sie nicht, mich zu kontaktieren. Ich freue mich darauf, mein Wissen weiter auszubauen.",
+
+    "selectedWorks": "AUSGEWÄHLTE WERKE",
+    "description": {
+    "elPolloLoco": "Jump, run und werfen Spiel basierend auf objektorientiertem Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen.",
+    "join": "Task-Manager inspiriert vom Kanban System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzern und Kategorien zu."
+    },
+
+    "reachOut1": "KONTAKTIERE",
+    "reachOut2": "MICH",
+    "questions1": "Für Fragen zögeren Sie nicht,",
+    "questions2": "mich zu kontaktieren",
+
+    "desAndDev": "Designed und entwickelt von",
+    "imprint": "Impressum"
+}

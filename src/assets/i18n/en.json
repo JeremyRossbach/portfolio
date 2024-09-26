@@ -1,0 +1,35 @@
+{
+    "aboutMe": "About me",
+    "work": "Work",
+    "contact": "Contakt",
+    "basedIn": "Based in",
+    "feelFree": "Feel free to reach out to me",
+    "contactMe": "Contact me",
+
+    "aboutMe1": "ABOUT",
+    "aboutMe2": "ME",
+    "aboutMeText1": "German-speaking Front-End Developer based in Hamburg, Germany. Driven by my affinity for innovative solutions and the endless possibilities offered by IT, I craft immersive digital experiences that combine creativity with functionality.",
+    "aboutMeText2": "I am flexible regarding my work environment and adapt my working style to ensure efficiency and collaboration, regardless of location. I particularly enjoy working on-site to collaborate even more closely with my colleagues. At the same time, I have gained experience in remote work and utilized modern tools like Discord, Slack, Trello, and Git to support communication and project tracking.",
+    "aboutMeText3": "I am always eager to learn new technologies and approaches, embracing every challenge to bring your goals and visions to life. I look forward to collaborating on new projects where I can leverage my experience to help create innovative web solutions.",
+
+    "javascript": "JavaScript is an essential programming language in front-end development that creates interactive and dynamic user interfaces for web applications. Additionally, it allows the manipulation of HTML and CSS and forms the core of many popular frameworks and libraries such as React, Angular, and Vue.js.",
+    "typescript": "TypeScript is a programming language based on JavaScript that offers static typing to improve code quality and maintainability. It allows for early error detection and is commonly used in modern frameworks such as Angular and React.",
+    "angular": "Angular is a widely used framework for developing web applications that is based on TypeScript and helps developers create powerful and dynamic single-page applications (SPAs). It is characterized by a modular architecture and comprehensive tools such as routing, which enable efficient development and maintenance of complex applications.",
+    "skillsText1": "In addition, I have extensive knowledge in various other areas, including HTML, CSS (SCSS), and interaction with databases in the form of REST APIs and Firebase databases. I am familiar with applying the SCRUM methodology for agile project management as well as working with Git. I also have experience working with design frameworks such as Material Design and Bootstrap.",
+    "skillsText2": "If you are looking for additional skills, please feel free to contact me. I look forward to expanding my knowledge further.",
+
+    "selectedWorks1": "SELECTED",
+    "selectedWorks2": "WORKS",
+    "description": {
+    "elPolloLoco": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
+    "join": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+    },
+
+    "reachOut1": "REACH",
+    "reachOut2": "OUT",
+    "questions1": "For any questions, don’t",
+    "questions2": "hesitate to reach out to me.",
+
+    "desAndDev": "Designed und entwickelt von",
+    "imprint": "Impressum"
+}
