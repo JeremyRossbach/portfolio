@@ -22,7 +22,8 @@
 }
 
 #logo {
-    width: 162px;
+    /* width: 162px; */
+    width: 171px; // vorübergehend !!!
     padding-left: 32px;
     overflow: hidden;
     @include links;
@@ -49,7 +50,8 @@
 }
 
 #mode {
-    width: 162px;
+    /* width: 162px; */
+    width: 171px; // vorübergehend !!!
     @include df-c;
     justify-content: end;
     margin-right: 32px;
