@@ -59,6 +59,30 @@ body.light-mode a {
     }
 }
 
+.language-light-mode {
+    color: #211f2000;
+    color: #0000 !important;
+    text-shadow: 0 0 #211F20, 0 1.2em #211F20 !important;
+    overflow: hidden;
+    transition: 0.3s;
+
+    &:hover {
+        text-shadow: 0 -1.2em #211F20, 0 0 #211F20 !important;
+    }
+}
+
+.language-dark-mode {
+    line-height: 1.2em;
+    color: #0000 !important;
+    text-shadow: 0 0 #EDECE7, 0 1.2em #EDECE7 !important;
+    overflow: hidden;
+    transition: 0.3s;
+
+    &:hover {
+        text-shadow: 0 -1.2em #EDECE7, 0 0 #EDECE7 !important;
+    }
+}
+
 body.dark-mode {
     background-color: #211F20;
     color: #EDECE7;

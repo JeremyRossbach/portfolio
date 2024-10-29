@@ -59,13 +59,21 @@
     height: 1.2em;
     display: flex;
     align-items: center;
+    color: #211f2000;
+    color: #0000 !important;
+    text-shadow: 0 0 #211F20, 0 1.2em #211F20;
+    overflow: hidden;
+    transition: 0.3s;
     
     &:hover {
         cursor: pointer;
+        text-shadow: 0 -1.2em #211F20, 0 0 #211F20;
     }
 }
 
 .arrow {
+    margin-left: 8px;
+
     &:hover {
         cursor: pointer;
     }
@@ -85,9 +93,15 @@
 .deutsch {
     display: flex;
     align-items: center;
-
+    color: #211f2000;
+    color: #0000 !important;
+    text-shadow: 0 0 #211F20, 0 1.2em #211F20;
+    overflow: hidden;
+    transition: 0.3s;
+    
     &:hover {
         cursor: pointer;
+        text-shadow: 0 -1.2em #211F20, 0 0 #211F20;
     }
 }
 
