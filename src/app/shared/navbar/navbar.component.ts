@@ -32,8 +32,15 @@ export class NavbarComponent {
   @ViewChild('modeIconContainer') modeIconContainer!: ElementRef;
   @ViewChild('modeIcon') modeIcon!: ElementRef;
   @ViewChild('dropdownMenu') dropdownMenu!: ElementRef;
+  @ViewChild('arrowdown') arrowdown!: ElementRef;
+  @ViewChild('translateIcon') translateIcon!: ElementRef;
+  @ViewChild('languageMenuContainer') languageMenuContainer!: ElementRef;
+  @ViewChild('english') english!: ElementRef;
+  @ViewChild('deutsch') deutsch!: ElementRef;
 
   menuOpen = false;
+  languageMenuOpen = false;
+  darkmode = false;
 
 
   constructor(private appComponent: AppComponent) { }
@@ -86,6 +93,37 @@ export class NavbarComponent {
   }
 
 
+  languageMenu() {
+    if (!this.languageMenuOpen) {
+      this.openLanguageMenu();
+      this.languageMenuOpen = true;
+    } else {
+      this.closeLanguageMenu();
+      this.languageMenuOpen = false;
+    }
+  }
+
+
+  openLanguageMenu() {
+    this.languageMenuContainer.nativeElement.style.display = 'flex';
+    if (!this.darkmode) {
+      this.arrowdown.nativeElement.src = './../../../assets/img/arrowup-black.svg';
+    } else {
+      this.arrowdown.nativeElement.src = './../../../assets/img/arrowup-white.svg';
+    }
+  }
+
+
+  closeLanguageMenu() {
+    this.languageMenuContainer.nativeElement.style.display = 'none';
+    if (!this.darkmode) {
+      this.arrowdown.nativeElement.src = './../../../assets/img/arrowdown-black.svg';
+    } else {
+      this.arrowdown.nativeElement.src = './../../../assets/img/arrowdown-white.svg';
+    }
+  }
+
+
   mode() {
     if (!this.appComponent.darkModeActive) {
       this.darkMode();
@@ -96,21 +134,41 @@ export class NavbarComponent {
 
 
   lightMode() {
+    this.darkmode = false;
     document.body.classList.add('light-mode');
     document.body.classList.remove('dark-mode');
+    this.english.nativeElement.classList.add('light-mode');
+    this.english.nativeElement.classList.remove('dark-mode');
+    this.deutsch.nativeElement.classList.add('light-mode');
+    this.deutsch.nativeElement.classList.remove('dark-mode');
     this.menuIcon.nativeElement.src = './../../../assets/img/menu-black.svg';
     this.closeIcon.nativeElement.src = './../../../assets/img/close-black.svg';
     this.modeIcon.nativeElement.src = './../../../assets/img/darkmode-black.svg';
     this.appComponent.darkModeActive = false;
+    if (!this.languageMenuOpen) {
+      this.arrowdown.nativeElement.src = './../../../assets/img/arrowdown-black.svg';
+    } else {
+      this.arrowdown.nativeElement.src = './../../../assets/img/arrowup-black.svg';
+    }
   }
 
 
   darkMode() {
+    this.darkmode = true;
     document.body.classList.add('dark-mode');
     document.body.classList.remove('light-mode');
+    this.english.nativeElement.classList.add('dark-mode');
+    this.english.nativeElement.classList.remove('light-mode');
+    this.deutsch.nativeElement.classList.add('dark-mode');
+    this.deutsch.nativeElement.classList.remove('light-mode');
     this.menuIcon.nativeElement.src = './../../../assets/img/menu-white.svg';
     this.closeIcon.nativeElement.src = './../../../assets/img/close-white.svg';
     this.modeIcon.nativeElement.src = './../../../assets/img/lightmode-white.svg';
     this.appComponent.darkModeActive = true;
+    if (!this.languageMenuOpen) {
+      this.arrowdown.nativeElement.src = './../../../assets/img/arrowdown-white.svg';
+    } else {
+      this.arrowdown.nativeElement.src = './../../../assets/img/arrowup-white.svg';
+    }
   }
 }

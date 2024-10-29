@@ -13,6 +13,16 @@
             <img (click)="menu()" #closeIcon id="closeIcon" src="./../../../assets/img/close-black.svg">
             <a #work class="link" href="#work-section">Work</a>
             <a #contact class="link" href="#contact-section">Contact</a>
+            <div>
+                <div #language class="language" href="">
+                    <div class="languageContainer">
+                        <span #english class="english">English <img #arrowdown (click)="languageMenu()" class="arrow" src="./../../../assets/img/arrowdown-black.svg"></span>
+                    </div>
+                </div>
+                <div #languageMenuContainer class="languageMenuContainer link">
+                    <span #deutsch class="deutsch">Deutsch</span>
+                </div>
+            </div>
         </div>
     </div>
     <div #modeIconContainer id="mode">
