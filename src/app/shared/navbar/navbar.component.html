@@ -8,19 +8,20 @@
     </div>
     <div #menuContainer id="menuContainer">
         <div #menuPoints id="menuPoints">
-            <a #aboutMe class="link" href="#about-section">About me</a>
+            <a #aboutMe class="link" href="#about-section">{{ "aboutMe" | translate }}</a>
             <a #skills class="link" href="#skills-section">Skills</a>
             <img (click)="menu()" #closeIcon id="closeIcon" src="./../../../assets/img/close-black.svg">
-            <a #work class="link" href="#work-section">Work</a>
-            <a #contact class="link" href="#contact-section">Contact</a>
+            <a #work class="link" href="#work-section">{{ "work" | translate }}</a>
+            <a #contact class="link" href="#contact-section">{{ "contact" | translate }}</a>
             <div>
                 <div #language class="language" href="">
                     <div class="languageContainer">
-                        <span #english class="english">English <img #arrowdown (click)="languageMenu()" class="arrow" src="./../../../assets/img/arrowdown-black.svg"></span>
+                        <span #english (click)="switchLanguage('en')" class="english">English</span>
+                        <img #arrowdown (click)="languageMenu()" class="arrow" src="./../../../assets/img/arrowdown-black.svg">
                     </div>
                 </div>
                 <div #languageMenuContainer class="languageMenuContainer link">
-                    <span #deutsch class="deutsch">Deutsch</span>
+                    <span #deutsch (click)="switchLanguage('de')" class="deutsch">Deutsch</span>
                 </div>
             </div>
         </div>

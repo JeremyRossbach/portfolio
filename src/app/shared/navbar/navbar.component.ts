@@ -2,6 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { AppComponent } from '../../app.component';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 
 
 @Component({
@@ -11,7 +13,8 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
     CommonModule,
     AppComponent,
     RouterLink,
-    RouterLinkActive
+    RouterLinkActive,
+    TranslateModule
   ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
@@ -43,7 +46,7 @@ export class NavbarComponent {
   darkmode = false;
 
 
-  constructor(private appComponent: AppComponent) { }
+  constructor(private appComponent: AppComponent, private translate: TranslateService) { }
 
 
   goToTop() {
@@ -170,5 +173,10 @@ export class NavbarComponent {
     } else {
       this.arrowdown.nativeElement.src = './../../../assets/img/arrowup-white.svg';
     }
+  }
+
+
+  switchLanguage(language: string) {
+    this.translate.use(language);
   }
 }
