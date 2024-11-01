@@ -129,25 +129,9 @@ h1 {
     }
 }
 
-@media (max-width: 550px) {
-    #links {
-        flex-direction: column;
-        gap: 0;
-    }
-
+@media (max-width: 600px) {
     #text {
-        align-items: baseline;
-    }
-
-    #text1 {
-        width: 180px;
-    }
-
-    #text2 {
-        width: 90px !important;
-        margin: 0;
-        margin-right: 32px;
-        margin-bottom: 32px;
+        display: none;
     }
 }
 

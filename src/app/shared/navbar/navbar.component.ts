@@ -30,6 +30,7 @@ export class NavbarComponent {
   @ViewChild('contact') contact!: ElementRef;
   @ViewChild('menuPoint') menuPoint!: ElementRef;
   @ViewChild('menuContainer') menuContainer!: ElementRef;
+  @ViewChild('mobileMenu') mobileMenu!: ElementRef;
   @ViewChild('menuIcon') menuIcon!: ElementRef;
   @ViewChild('closeIcon') closeIcon!: ElementRef;
   @ViewChild('modeIconContainer') modeIconContainer!: ElementRef;
@@ -38,6 +39,8 @@ export class NavbarComponent {
   @ViewChild('arrowdown') arrowdown!: ElementRef;
   @ViewChild('translateIcon') translateIcon!: ElementRef;
   @ViewChild('languageMenuContainer') languageMenuContainer!: ElementRef;
+  @ViewChild('languageMobileMenuContainer') languageMobileMenuContainer!: ElementRef;
+  @ViewChild('selectLanguage') selectLanguage!: ElementRef;
   @ViewChild('english') english!: ElementRef;
   @ViewChild('deutsch') deutsch!: ElementRef;
 
@@ -79,20 +82,22 @@ export class NavbarComponent {
 
 
   openMenu() {
-    this.content.nativeElement.style.justifyContent = 'center';
+    this.mobileMenu.nativeElement.style.display = 'flex';
     this.menuIcon.nativeElement.style.display = 'none';
-    this.menuContainer.nativeElement.style.display = 'flex';
     this.logoContainer.nativeElement.style.display = 'none';
-    this.modeIconContainer.nativeElement.style.display = 'none';
   }
 
 
   closeMenu() {
-    this.content.nativeElement.style.justifyContent = 'space-between';
+    this.mobileMenu.nativeElement.style.display = 'none';
     this.menuIcon.nativeElement.style.display = 'flex';
-    this.menuContainer.nativeElement.style.display = 'none';
     this.logoContainer.nativeElement.style.display = 'flex';
-    this.modeIconContainer.nativeElement.style.display = 'flex';
+  }
+
+
+  closeMobileMenu() {
+    this.menuOpen = false;
+    this.closeMenu();
   }
 
 
@@ -140,12 +145,13 @@ export class NavbarComponent {
     this.darkmode = false;
     document.body.classList.add('light-mode');
     document.body.classList.remove('dark-mode');
+    this.selectLanguage.nativeElement.classList.add('language-light-mode');
+    this.selectLanguage.nativeElement.classList.remove('language-dark-mode');
     this.english.nativeElement.classList.add('language-light-mode');
     this.english.nativeElement.classList.remove('language-dark-mode');
     this.deutsch.nativeElement.classList.add('language-light-mode');
     this.deutsch.nativeElement.classList.remove('language-dark-mode');
     this.menuIcon.nativeElement.src = './../../../assets/img/menu-black.svg';
-    this.closeIcon.nativeElement.src = './../../../assets/img/close-black.svg';
     this.modeIcon.nativeElement.src = './../../../assets/img/darkmode-black.svg';
     this.appComponent.darkModeActive = false;
     if (!this.languageMenuOpen) {
@@ -160,12 +166,13 @@ export class NavbarComponent {
     this.darkmode = true;
     document.body.classList.add('dark-mode');
     document.body.classList.remove('light-mode');
+    this.selectLanguage.nativeElement.classList.add('language-dark-mode');
+    this.selectLanguage.nativeElement.classList.remove('language-light-mode');
     this.english.nativeElement.classList.add('language-dark-mode');
     this.english.nativeElement.classList.remove('language-light-mode');
     this.deutsch.nativeElement.classList.add('language-dark-mode');
     this.deutsch.nativeElement.classList.remove('language-light-mode');
     this.menuIcon.nativeElement.src = './../../../assets/img/menu-white.svg';
-    this.closeIcon.nativeElement.src = './../../../assets/img/close-white.svg';
     this.modeIcon.nativeElement.src = './../../../assets/img/lightmode-white.svg';
     this.appComponent.darkModeActive = true;
     if (!this.languageMenuOpen) {
@@ -178,5 +185,7 @@ export class NavbarComponent {
 
   switchLanguage(language: string) {
     this.translate.use(language);
+    this.closeLanguageMenu();
+    this.languageMenuOpen = false;
   }
 }

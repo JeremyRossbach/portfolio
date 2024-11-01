@@ -10,17 +10,18 @@
         <div #menuPoints id="menuPoints">
             <a #aboutMe class="link" href="#about-section">{{ "aboutMe" | translate }}</a>
             <a #skills class="link" href="#skills-section">Skills</a>
-            <img (click)="menu()" #closeIcon id="closeIcon" src="./../../../assets/img/close-black.svg">
             <a #work class="link" href="#work-section">{{ "work" | translate }}</a>
             <a #contact class="link" href="#contact-section">{{ "contact" | translate }}</a>
             <div>
-                <div #language class="language" href="">
+                <div #language class="language">
                     <div class="languageContainer">
-                        <span #english (click)="switchLanguage('en')" class="english">English</span>
-                        <img #arrowdown (click)="languageMenu()" class="arrow" src="./../../../assets/img/arrowdown-black.svg">
+                        <span #selectLanguage (click)="languageMenu()" class="selectLanguage">{{ "language" | translate }}</span>
+                        <img #arrowdown (click)="languageMenu()" class="arrow"
+                            src="./../../../assets/img/arrowdown-black.svg">
                     </div>
                 </div>
                 <div #languageMenuContainer class="languageMenuContainer link">
+                    <span #english (click)="switchLanguage('en')" class="deutsch">English</span>
                     <span #deutsch (click)="switchLanguage('de')" class="deutsch">Deutsch</span>
                 </div>
             </div>
@@ -28,5 +29,13 @@
     </div>
     <div #modeIconContainer id="mode">
         <img (click)="mode()" #modeIcon id="modeIcon" src="./../../../assets/img/darkmode-black.svg">
+    </div>
+</div>
+<div>
+    <div #mobileMenu id="mobileMenu">
+        <a #aboutMe (click)="closeMobileMenu()" class="link" href="#about-section">{{ "aboutMe" | translate }}</a>
+        <a #skills (click)="closeMobileMenu()" class="link" href="#skills-section">Skills</a>
+        <a #work (click)="closeMobileMenu()" class="link" href="#work-section">{{ "work" | translate }}</a>
+        <a #contact (click)="closeMobileMenu()" class="link" href="#contact-section">{{ "contact" | translate }}</a>
     </div>
 </div>
