@@ -13,15 +13,5 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './hero.component.scss'
 })
 export class HeroComponent {
-  @ViewChild('me') me!:ElementRef;
 
-
-  laughing() {
-    this.me.nativeElement.src = ''; // image of laughing
-  }
-
-
-  normal() {
-    this.me.nativeElement.src = './../../../assets/img/placeholder.png'; // normal image
-  }
 }

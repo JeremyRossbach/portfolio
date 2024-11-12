@@ -91,13 +91,23 @@
     flex-direction: column;
 }
 
-.languageMobileMenuContainer {
+.languageMenuMobileContainer {
+    width: 86px;
     position: absolute;
     display: none;
     flex-direction: column;
 }
 
-.deutsch {
+#closeButton {
+    width: 32px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.deutsch,
+.mobileDeutsch {
     display: flex;
     align-items: center;
     color: #211f2000;
@@ -110,6 +120,10 @@
         cursor: pointer;
         text-shadow: 0 -1.2em #211F20, 0 0 #211F20;
     }
+}
+
+.mobileDeutsch {
+    justify-content: center;
 }
 
 #mode {

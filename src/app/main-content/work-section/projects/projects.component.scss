@@ -31,6 +31,8 @@
 
 .projectTitle {
     width: 230px;
+    height: 128px;
+    @include df-c;
     font-size: 64px;
     font-weight: 100;
     line-height: 64px;

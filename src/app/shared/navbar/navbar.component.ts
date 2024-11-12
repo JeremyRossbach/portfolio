@@ -33,19 +33,27 @@ export class NavbarComponent {
   @ViewChild('mobileMenu') mobileMenu!: ElementRef;
   @ViewChild('menuIcon') menuIcon!: ElementRef;
   @ViewChild('closeIcon') closeIcon!: ElementRef;
+  @ViewChild('closeButton') closeButton!: ElementRef;
   @ViewChild('modeIconContainer') modeIconContainer!: ElementRef;
+  @ViewChild('modeIconMobileContainer') modeIconMobileContainer!: ElementRef;
   @ViewChild('modeIcon') modeIcon!: ElementRef;
+  @ViewChild('mobileModeIcon') mobileModeIcon!: ElementRef;
   @ViewChild('dropdownMenu') dropdownMenu!: ElementRef;
   @ViewChild('arrowdown') arrowdown!: ElementRef;
+  @ViewChild('mobileArrowdown') mobileArrowdown!: ElementRef;
   @ViewChild('translateIcon') translateIcon!: ElementRef;
   @ViewChild('languageMenuContainer') languageMenuContainer!: ElementRef;
   @ViewChild('languageMobileMenuContainer') languageMobileMenuContainer!: ElementRef;
   @ViewChild('selectLanguage') selectLanguage!: ElementRef;
+  @ViewChild('selectMobileLanguage') selectMobileLanguage!: ElementRef;
   @ViewChild('english') english!: ElementRef;
   @ViewChild('deutsch') deutsch!: ElementRef;
+  @ViewChild('mobileEnglish') mobileEnglish!: ElementRef;
+  @ViewChild('mobileDeutsch') mobileDeutsch!: ElementRef;
 
   menuOpen = false;
   languageMenuOpen = false;
+  languageMobileMenuOpen = false;
   darkmode = false;
 
 
@@ -112,6 +120,15 @@ export class NavbarComponent {
   }
 
 
+  languageMobileMenu() {
+    if (!this.languageMobileMenuOpen) {
+      this.openLanguageMobileMenu();
+    } else {
+      this.closeLanguageMobileMenu();
+    }
+  }
+
+
   openLanguageMenu() {
     this.languageMenuContainer.nativeElement.style.display = 'flex';
     if (!this.darkmode) {
@@ -132,6 +149,28 @@ export class NavbarComponent {
   }
 
 
+  openLanguageMobileMenu() {
+    this.languageMobileMenuContainer.nativeElement.style.display = 'flex';
+    this.languageMobileMenuOpen = true;
+    if (!this.darkmode) {
+      this.mobileArrowdown.nativeElement.src = './../../../assets/img/arrowup-black.svg';
+    } else {
+      this.mobileArrowdown.nativeElement.src = './../../../assets/img/arrowup-white.svg';
+    }
+  }
+
+
+  closeLanguageMobileMenu() {
+    this.languageMobileMenuContainer.nativeElement.style.display = 'none';
+    this.languageMobileMenuOpen = false;
+    if (!this.darkmode) {
+      this.mobileArrowdown.nativeElement.src = './../../../assets/img/arrowdown-black.svg';
+    } else {
+      this.mobileArrowdown.nativeElement.src = './../../../assets/img/arrowdown-white.svg';
+    }
+  }
+
+
   mode() {
     if (!this.appComponent.darkModeActive) {
       this.darkMode();
@@ -147,17 +186,28 @@ export class NavbarComponent {
     document.body.classList.remove('dark-mode');
     this.selectLanguage.nativeElement.classList.add('language-light-mode');
     this.selectLanguage.nativeElement.classList.remove('language-dark-mode');
+    this.selectMobileLanguage.nativeElement.classList.add('language-light-mode');
+    this.selectMobileLanguage.nativeElement.classList.remove('language-dark-mode');
     this.english.nativeElement.classList.add('language-light-mode');
     this.english.nativeElement.classList.remove('language-dark-mode');
     this.deutsch.nativeElement.classList.add('language-light-mode');
     this.deutsch.nativeElement.classList.remove('language-dark-mode');
+    this.mobileEnglish.nativeElement.classList.add('language-light-mode');
+    this.mobileEnglish.nativeElement.classList.remove('language-dark-mode');
+    this.mobileDeutsch.nativeElement.classList.add('language-light-mode');
+    this.mobileDeutsch.nativeElement.classList.remove('language-dark-mode');
+    this.mobileMenu.nativeElement.style.backgroundColor = '#EDECE7';
     this.menuIcon.nativeElement.src = './../../../assets/img/menu-black.svg';
     this.modeIcon.nativeElement.src = './../../../assets/img/darkmode-black.svg';
+    this.mobileModeIcon.nativeElement.src = './../../../assets/img/darkmode-black.svg';
+    this.closeButton.nativeElement.src = './../../../assets/img/close-black.svg';
     this.appComponent.darkModeActive = false;
     if (!this.languageMenuOpen) {
       this.arrowdown.nativeElement.src = './../../../assets/img/arrowdown-black.svg';
+      this.mobileArrowdown.nativeElement.src = './../../../assets/img/arrowdown-black.svg';
     } else {
       this.arrowdown.nativeElement.src = './../../../assets/img/arrowup-black.svg';
+      this.mobileArrowdown.nativeElement.src = './../../../assets/img/arrowup-black.svg';
     }
   }
 
@@ -168,17 +218,28 @@ export class NavbarComponent {
     document.body.classList.remove('light-mode');
     this.selectLanguage.nativeElement.classList.add('language-dark-mode');
     this.selectLanguage.nativeElement.classList.remove('language-light-mode');
+    this.selectMobileLanguage.nativeElement.classList.add('language-dark-mode');
+    this.selectMobileLanguage.nativeElement.classList.remove('language-light-mode');
     this.english.nativeElement.classList.add('language-dark-mode');
     this.english.nativeElement.classList.remove('language-light-mode');
     this.deutsch.nativeElement.classList.add('language-dark-mode');
     this.deutsch.nativeElement.classList.remove('language-light-mode');
+    this.mobileEnglish.nativeElement.classList.add('language-dark-mode');
+    this.mobileEnglish.nativeElement.classList.remove('language-light-mode');
+    this.mobileDeutsch.nativeElement.classList.add('language-dark-mode');
+    this.mobileDeutsch.nativeElement.classList.remove('language-light-mode');
+    this.mobileMenu.nativeElement.style.backgroundColor = '#211F20';
     this.menuIcon.nativeElement.src = './../../../assets/img/menu-white.svg';
     this.modeIcon.nativeElement.src = './../../../assets/img/lightmode-white.svg';
+    this.mobileModeIcon.nativeElement.src = './../../../assets/img/lightmode-white.svg';
+    this.closeButton.nativeElement.src = './../../../assets/img/close-white.svg';
     this.appComponent.darkModeActive = true;
     if (!this.languageMenuOpen) {
       this.arrowdown.nativeElement.src = './../../../assets/img/arrowdown-white.svg';
+      this.mobileArrowdown.nativeElement.src = './../../../assets/img/arrowdown-white.svg';
     } else {
       this.arrowdown.nativeElement.src = './../../../assets/img/arrowup-white.svg';
+      this.mobileArrowdown.nativeElement.src = './../../../assets/img/arrowup-white.svg';
     }
   }
 

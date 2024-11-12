@@ -33,9 +33,26 @@
 </div>
 <div>
     <div #mobileMenu id="mobileMenu">
+        <img #closeButton (click)="closeMobileMenu()" id="closeButton" src="./../../../assets/img/close-black.svg">
+        <img (click)="mode()" #mobileModeIcon id="modeIcon" src="./../../../assets/img/darkmode-black.svg">
         <a #aboutMe (click)="closeMobileMenu()" class="link" href="#about-section">{{ "aboutMe" | translate }}</a>
         <a #skills (click)="closeMobileMenu()" class="link" href="#skills-section">Skills</a>
         <a #work (click)="closeMobileMenu()" class="link" href="#work-section">{{ "work" | translate }}</a>
         <a #contact (click)="closeMobileMenu()" class="link" href="#contact-section">{{ "contact" | translate }}</a>
+        <div>
+            <div #mobileLanguage class="language">
+                <div class="languageContainer">
+                    <span #selectMobileLanguage (click)="languageMobileMenu()" class="selectLanguage">{{ "language" | translate }}</span>
+                    <img #mobileArrowdown (click)="languageMobileMenu()" class="arrow"
+                        src="./../../../assets/img/arrowdown-black.svg">
+                </div>
+            </div>
+            <div #languageMobileMenuContainer class="languageMenuMobileContainer link">
+                <span #mobileEnglish (click)="switchLanguage('en'); closeLanguageMobileMenu()"
+                    class="mobileDeutsch">English</span>
+                <span #mobileDeutsch (click)="switchLanguage('de'); closeLanguageMobileMenu()"
+                    class="mobileDeutsch">Deutsch</span>
+            </div>
+        </div>
     </div>
 </div>
