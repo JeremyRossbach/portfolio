@@ -44,7 +44,7 @@ h1 {
 }
 
 #me {
-    width: 500px;
+    width: 571px;
     position: fixed;
     @include center-absolute;
     z-index: 3;
@@ -87,7 +87,7 @@ h1 {
     }
 
     #me {
-        width: 400px;
+        width: 456px;
     }
 
     #background {
@@ -121,7 +121,7 @@ h1 {
 
 @media (max-width: 650px) {
     #me {
-        width: 300px;
+        width: 342px;
     }
 
     #background {
